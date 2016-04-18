@@ -20,26 +20,13 @@
 				</div>
 			</main>
 			
-			<nav id="nav">
-				<div class="innertube">
-					<h3>Introduction</h3>
-					<ul>
-						<li><a href="portfolio.html">About the Class</a></li>
-						&nbsp
-						<li><a href="essay.html">My Experience</a></li>
-					</ul>
-					<h3>Projects</h3>
-					<ul>
-						<li><a href="unit1.html">Unit 1 - A Discourse Community</a></li>
-						&nbsp
-						<li><a href="unit2.html">Unit 2 - A Researched Argument</a></li>
-						&nbsp
-						<li><a href="unit3.html">Unit 3 - A Workplace Audience</a></li>
-						&nbsp
-						<li><a href="unit4.html">Unit 4 - A Public Campaign</a></li>
-					</ul>
-				</div>
-			</nav>
+						<div id=navi></div>
+			<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+			$('#navi').load('navbar.html');
+			});
+			</script>
 		</div>
 	</body>
 </html> 
