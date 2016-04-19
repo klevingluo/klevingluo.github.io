@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<title>Porfolio</title>
+		<script src="/js/pdfobject.js"></script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<h1>Bits and Bots Memo</h1>
+						<p>
+						Writing for a class, no matter how seriously I intend to take it, is never quite the same as writing in a real context.  I started noticing that as I compared my writing in this class to other writing in the semester.  Below is a brief memo that I wrote as part of a robotics education outreach program I am involved in.  I was trying to provide feedback to curriculum development team as a member of the classroom teaching staff.  I didn’t include a context section, but my intended audience had no trouble understanding my points.
+						</p>
+						<p>
+						Writing this piece I had the opposite problem that I had with classroom assignments,  I needed to trim down things that I wanted to say to a readable length.  I also noticed that I had a clear picture of the audience I was directing towards, and a clear idea of the effect I wanted it to have, which I think is the real metric of the effectiveness of a piece of writing.  Throughout the course of the project, we worked on materials for internal and external use, for middle school kids and for their parents, so we always needed to keep the audience in mind.  In this internal memo, I also adopted a very colloquial tone, compared to class writing, which I treated as more academic.
+						</p>
+						<div id="example1"></div>
+						<script src="js/pdfobject.js"></script>
+						<script>PDFObject.embed("pdf/BBmemo.pdf", "#example1");</script>
+					</div>
+				</div>
+			</main>
+			<div id=navi></div>
+			<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+			$('#navi').load('navbar.html');
+			});
+			</script>
+		</div>
+	</body>
+</html> 
