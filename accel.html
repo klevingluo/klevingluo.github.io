@@ -59,7 +59,7 @@ if (window.DeviceMotionEvent != undefined) {
     lastTime = nowTime; 
     position = position + (nowTime - lastTime)*speed;
 
-    document.getElementById("pos").innerHTML = speed;
+    document.getElementById("pos").innerHTML = Math.trunc(position);
 
     ax = event.accelerationIncludingGravity.x * 5;
     ay = event.accelerationIncludingGravity.y * 5;
