@@ -57,6 +57,9 @@ if (window.DeviceMotionEvent != undefined) {
     speed = speed + (nowTime - lastTime)*e.accelerationIncludingGravity.x;
 
     lastTime = nowTime; 
+    position = position + (nowTime - lastTime)*speed;
+
+    document.getElementById("pos").innerHTML = speed;
 
     ax = event.accelerationIncludingGravity.x * 5;
     ay = event.accelerationIncludingGravity.y * 5;
@@ -93,10 +96,6 @@ if (window.DeviceMotionEvent != undefined) {
       document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
       var d = new Date();
       var nowTime = d.getTime();
-      position = position + (nowTime - lastTime2)*speed;
-
-      lastTime2 = nowTime; 
-      document.getElementById("pos").innerHTML = speed;
       
     }, 25);
 } 
