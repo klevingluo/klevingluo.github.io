@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -59,7 +58,7 @@ if (window.DeviceMotionEvent != undefined) {
 
     lastTime = nowTime; 
 
-    document.getElementById("pos").innerHTML = Math.trunc(position);
+    document.getElementById("pos").innerHTML = position;
 
     ax = event.accelerationIncludingGravity.x * 5;
     ay = event.accelerationIncludingGravity.y * 5;
