@@ -62,7 +62,7 @@ if (window.DeviceMotionEvent != undefined) {
 
     ax = event.accelerationIncludingGravity.x * 5;
     ay = event.accelerationIncludingGravity.y * 5;
-    document.getElementById("time").innerHTML = d.getTime();
+    document.getElementById("time").innerHTML = speed;
     document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
     document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
     document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
