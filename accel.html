@@ -24,6 +24,7 @@ body {
           <h1>Accelerometer Javascript Test</h1>
           <div id="sphere"></div>
           <ul>
+            <li>position: <span id="pos"></span>units</li>
             <li>time: <span id="time"></span>ms</li>
             <li>acceleration x: <span id="accelerationX"></span>g</li>
             <li>acceleration y: <span id="accelerationY"></span>g</li>
@@ -41,11 +42,22 @@ var x = 0, y = 0,
 
 var sphere = document.getElementById("sphere");
 
+var d = new Date();
+var lastTime = d.getTime();
+var lastTime2 = d.getTime();
+var speed = 0;
+var position = 0;
+
 if (window.DeviceMotionEvent != undefined) {
   window.ondevicemotion = function(e) {
     var d = new Date();
 
-    speed = 0;
+    var nowTime = d.getTime();
+
+    speed = speed + (nowTime - lastTime)*e.accelerationIncludingGravity.x;
+
+    lastTime = nowTime; 
+
     ax = event.accelerationIncludingGravity.x * 5;
     ay = event.accelerationIncludingGravity.y * 5;
     document.getElementById("time").innerHTML = d.getTime();
@@ -78,6 +90,13 @@ if (window.DeviceMotionEvent != undefined) {
       
       sphere.style.top = y + "px";
       sphere.style.left = x + "px";
+      document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
+      var d = new Date();
+      var nowTime = d.getTime();
+      position = position + (nowTime - lastTime)*speed;
+
+      lastTime = nowTime; 
+      document.getElementById("pos").innerHTML = Math.trunc(position);
       
     }, 25);
 } 
